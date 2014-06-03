@@ -48,7 +48,8 @@ when 'rhel'
 
   yum_repository 'mariadb' do
     description 'MariaDB Repository'
-    baseurl     "http://yum.mariadb.org/#{node['mariadb']['version']}/#{node['platform']}#{pversion}-#{arch}"
+    #baseurl     "http://yum.mariadb.org/#{node['mariadb']['version']}/#{node['platform']}#{pversion}-#{arch}"
+    baseurl     "http://yum.mariadb.org/#{node['mariadb']['version']}/#{node['mariadb']['platform']}#{pversion}-#{arch}"
     gpgkey      'https://yum.mariadb.org/RPM-GPG-KEY-MariaDB'
   end
 when 'fedora'

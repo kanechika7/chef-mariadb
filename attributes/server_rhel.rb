@@ -32,3 +32,6 @@ when 'rhel'
   default['mariadb']['tunable']['innodb_adaptive_flushing'] = false
   default['mariadb']['server']['skip_federated'] = false
 end
+
+
+default['mariadb']['platform'] = 'centos6'
